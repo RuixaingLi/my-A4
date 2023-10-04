@@ -16,21 +16,18 @@ class Spinner:
                 synonym_dic[key] = value_list
         return synonym_dic
 
-    def random_replace(self):
-        self.randint = random.randint(0, 100)
-        if self.randint > 50:
-            return True
-        else:
-            return False
-
     def look_for_keyword(self, essay_txt):
         words = essay_txt.split()
         replaced_list = []
         for word in words:
-            if word in self.replace_dic:
-                synonym_list = self.replace_dic[word]
-                random_replace(replacement) = random.choice(synonym_list)
-                replaced_list.append(replacement)
+            randint = random.randint(0, 100)
+            if randint > 50:
+                if word in self.replace_dic:
+                    synonym_list = self.replace_dic[word]
+                    replacement = random.choice(synonym_list)
+                    replaced_list.append(replacement)
+                else:
+                    replaced_list.append(word)
             else:
                 replaced_list.append(word)
         my_replaced_string = ' '.join(replaced_list)
