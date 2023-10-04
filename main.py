@@ -15,18 +15,15 @@ class Spinner:
         return synonym_dic
 
 
-    def look_for_keyword(self):
-        words = ""
-        with open("essay.txt") as file:
-            for text in file:
-                words = words + text
-        replaced_string = []
+    def look_for_keyword(self,essay_txt):
+        words = essay_txt.split()
+        replaced_list = []
         for word in words:
             if word in self.replace_dic:
                 synonym_list =self.replace_dic[word]
                 replacement = "".join(synonym_list)
-                replaced_string.append(replacement)
+                replaced_list.append(replacement)
             else:
-                replaced_string.append(word)
-        my_replacement = ' '.join(replaced_string)
-        return my_replacement
+                replaced_list.append(word)
+        my_replaced_string = ' '.join(replaced_list)
+        return my_replaced_string

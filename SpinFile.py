@@ -12,6 +12,6 @@ essay = remove_punctuation(essay.lower())
 
 mytest = Spinner()
 
-mytest = mytest.look_for_keyword()
+mytest = mytest.look_for_keyword(essay)
 
 print(mytest)
