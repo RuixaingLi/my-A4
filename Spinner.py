@@ -1,4 +1,4 @@
-# A4 Word Spinner Solo work
+# A4 Word Spinner Solo work by Ruixiang Li U1388321 URL：https://github.com/RuixaingLi/my-A4
 import random
 
 
