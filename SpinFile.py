@@ -7,8 +7,8 @@ import string
 
 def main():
     def remove_punctuation(text):
-        translator = str.maketrans('', '', string.punctuation)
-        return text.translate(translator)
+        remove = str.maketrans('', '', string.punctuation)
+        return text.translate(remove)
 
     with open('essay.txt') as file:
         original_essay = file.read()
