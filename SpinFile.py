@@ -1,4 +1,4 @@
-from main import Spinner
+from Spinner import Spinner
 import string
 
 
@@ -15,6 +15,8 @@ for count in range(3):
     mytest = Spinner()
 
     mytest = mytest.look_for_keyword(essay)
-    print("Original" + str(count + 1) + ": " + Original_essay, end="")  # looks much better with it
-    print("Replaced" + str(count + 1) + ": " + mytest)
+
+    print("Original"+str(count+1)+": " + Original_essay, end="")#looks much better with it
+    print("Replaced"+str(count+1)+": " + mytest)
     print()
+
