@@ -12,8 +12,8 @@ def main():
 
     with open('essay.txt') as file:
         original_essay = file.read()
-
-    essay = remove_punctuation(original_essay.lower())
+    lower_essay = original_essay.lower()
+    essay = remove_punctuation(lower_essay)
     print("Original1: " + original_essay)  # if it is a sentences without punctuation it will look much better with
     # end=""
     print()
