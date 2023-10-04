@@ -1,17 +1,21 @@
 from main import Spinner
 import string
 
+
 def remove_punctuation(text):
     translator = str.maketrans('', '', string.punctuation)
     return text.translate(translator)
 
+
 with open('essay.txt') as file:
-    essay= file.read()
+    Original_essay = file.read()
 
-essay = remove_punctuation(essay.lower())
+essay = remove_punctuation(Original_essay.lower())
+for count in range(3):
+    mytest = Spinner()
 
-mytest = Spinner()
+    mytest = mytest.look_for_keyword(essay)
 
-mytest = mytest.look_for_keyword(essay)
+    print(Original_essay)
 
-print(mytest)
+    print(mytest)
