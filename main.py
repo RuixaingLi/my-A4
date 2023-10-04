@@ -1,3 +1,5 @@
+# class Spinner:
+#     def __init__(self):
 def read_synonym():
     synonym_dic = {}
     with open("test-synonyms.txt") as file:
@@ -8,10 +10,3 @@ def read_synonym():
             value_list = value.split(",")
             synonym_dic[key] = value_list
     return synonym_dic
-
-
-test_myfunction = read_synonym()
-print(test_myfunction)
-
-# class Spinner:
-    # def __init__(self):
