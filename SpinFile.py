@@ -16,6 +16,7 @@ for count in range(3):
 
     mytest = mytest.look_for_keyword(essay)
 
-    print(Original_essay)
+    print("Original"+str(count+1)+": " + Original_essay, end="")#looks much better with it
+    print("Replaced"+str(count+1)+": " + mytest)
+    print()
 
-    print(mytest)

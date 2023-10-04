@@ -1,3 +1,4 @@
+# A4 Word Spinner Solo work
 import random
 
 
@@ -7,11 +8,11 @@ class Spinner:
 
     def read_synonym(self):
         synonym_dic = {}
-        with open("test-synonyms.txt") as file:
+        with open("synonyms-simplified.txt") as file:
             for things in file:
-                things_withoutspace = things.strip()
-                key = things_withoutspace.split(':')[0]
-                value = things_withoutspace.split(':')[1]
+                things_without_space = things.strip()
+                key = things_without_space.split(':')[0]
+                value = things_without_space.split(':')[1]
                 value_list = value.split(",")
                 synonym_dic[key] = value_list
         return synonym_dic
