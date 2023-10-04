@@ -1,5 +1,4 @@
-
-import string
+import random
 class Spinner:
     def __init__(self):
         self.replace_dic = self.read_synonym()
@@ -14,13 +13,22 @@ class Spinner:
                 value_list = value.split(",")
                 synonym_dic[key] = value_list
         return synonym_dic
+
+
     def look_for_keyword(self):
+        words = ""
+        with open("essay.txt") as file:
+            for text in file:
+                words = words + text
         replaced_string = []
-        for word in self.replace_dic:
+        for word in words:
             if word in self.replace_dic:
                 synonym_list =self.replace_dic[word]
-                replacement = synonym_list
+                replacement = "".join(synonym_list)
                 replaced_string.append(replacement)
             else:
                 replaced_string.append(word)
-        return replaced_string
+        my_replacement = ''
+        for word in replaced_string:
+            my_replacement = my_replacement + word + " "
+        return my_replacement
