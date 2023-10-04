@@ -28,7 +28,5 @@ class Spinner:
                 replaced_string.append(replacement)
             else:
                 replaced_string.append(word)
-        my_replacement = ''
-        for word in replaced_string:
-            my_replacement = my_replacement + word + " "
+        my_replacement = ' '.join(replaced_string)
         return my_replacement
